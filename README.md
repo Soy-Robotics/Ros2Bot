@@ -9,9 +9,9 @@ OS Installation
 
    https://devtalk.nvidia.com/default/topic/823132/-customkernel-the-grinch-21-3-4-for-jetson-tk1-developed/
 
-wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra124_Linux_R21.3.0_armhf.tbz2
+   wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra124_Linux_R21.3.0_armhf.tbz2
 
-wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
+   wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
 
 2 . after downloading these files follow these instruciton in the host computer
 	1 tar -xvf Tegra124_Linux_R21.3.0_armhf.tbz2
@@ -26,36 +26,40 @@ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra_Li
 
 Kernal installation steps
 1. Download following files
-	1. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/zImage
-	2. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-modules.tar.bz2
-	3. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-firmware.tar.bz2
+  1. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/zImage
+  2. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-modules.tar.bz2
+  3. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-firmware.tar.bz2
+ 
+  
+
 2. check for the avialability of files, to do so follow these instructions
 	$ md5sum zImage 
-  	  a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
+  	a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
 	$ md5sum jetson-tk1-grinch-21.3.4-modules.tar.bz2 
  	  3f84d425a13930af681cc463ad4cf3e6  jetson-tk1-grinch-21.3.4-modules.tar.bz2
 	$ md5sum jetson-tk1-grinch-21.3.4-firmware.tar.bz2
- 	    f80d37ca6ae31d03e86707ce0943eb7f  jetson-tk1-grinch-21.3.4-firmware.tar.bz2
+ 	  f80d37ca6ae31d03e86707ce0943eb7f  jetson-tk1-grinch-21.3.4-firmware.tar.bz2
+
+
 3. now update the kernal
 	$ sudo tar -C /lib/modules -vxjf jetson-tk1-grinch-21.3.4-modules.tar.bz2
 	$ sudo tar -C /lib -vxjf jetson-tk1-grinch-21.3.4-firmware.tar.bz2
 	$ sudo cp zImage /boot/zImage
       check the kernal by connecting turtlebot usb and see whether u can find USB0. If so you are successfully finished the installation.
+
+
 Now jetson board has been configured with ubuntu environment
 To install CUDA on Jetson TK1 - L4T System
 
 
 
 Execute the following commands:
+  $ sudo dpkg -i cuda-repo-<distro>_<version>_<architecture>.deb
+  $ sudo apt-get update
+  $ sudo apt-get install cuda-toolkit-6-5
 
 
-
-        $ sudo dpkg -i cuda-repo-<distro>_<version>_<architecture>.deb
-
-        $ sudo apt-get update
-
-        $ sudo apt-get install cuda-toolkit-6-5
-Ros Installation
+#Ros Installation
 turn all the servers on in software and updates under ubuntu software tab
 check all under updates tab in software and updates
 1. Follow
