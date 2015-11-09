@@ -10,7 +10,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 
 4.REPLACING FILES FOR ROS2BOT MODEL
 
-SBC SETUP
+1.SBC SETUP
 
 Jetson TK1 is used as single board computer. The board configurations are following
 	2.3 GHz , quad core processor
@@ -18,7 +18,7 @@ Jetson TK1 is used as single board computer. The board configurations are follow
 	16 GB inbuilt memory
 
 OS installation
-	Jetson TK1 board comes with li
+	Jetson TK1 board comes with Tegra-Linux-R19.3. I have encountered several problems using this version especially desktop management and login loop problem. Hence chosen Tegra-Linux-R21.3 version.
 
 1. flash the os from this link and use downloaded files- follow the instructions
 
