@@ -5,11 +5,11 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 - [SBC SETUP](#sbc-setup)
 
 
-	2.[ROS INSTALLATION](#ros-installation)
+- [ROS INSTALLATION](#ros-installation)
 
-	3.[KINECT2 INSTALLATION](#kinect2-installation)
+- [KINECT2 INSTALLATION](#kinect2-installation)
 
-	4.REPLACING FILES FOR ROS2BOT MODEL
+- REPLACING FILES FOR ROS2BOT MODEL
 
 ##SBC SETUP
 
