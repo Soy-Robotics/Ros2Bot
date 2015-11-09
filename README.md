@@ -24,12 +24,19 @@ Follow these steps in host computer
 
 ####Before you Begin
 > You have a Jetson TK1 Tegra Developer Kit equipped with the NVIDIA Tegra K1 processor.
+
 > You have a host machine that is running Linux.
+
 > Your developer system is cabled as follows:
+
 	->Serial cable plugged into the serial port J1A2 UART4 on the target connected to your Linux host directly or through a serial-to-USB converter. (To setup serial console on the Linux host.)
+
 	-> USB Micro-B cable connecting Jetson TK1 (J1E1 USB0) to your Linux host for flashing.
+
 	-> A USB hub should be connected to the USB port (J1C2 USB2) on the Jetson TK1 system.
+
 	-> An HDMI cable plugged into "J1C1 HDMI1" on the target which is connected to an external HDMI display.
+
 	-> An Ethernet cable plugged into the J1D1 on board Ethernet port.
 
 
