@@ -5,9 +5,9 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 - [SBC SETUP](#sbc-setup)
 
 
-	2.[ROS INSTALLATION](#ROS-INSTALLATION)
+	2.[ROS INSTALLATION](#ros-installation)
 
-	3.KINECT2 INSTALLATION
+	3.[KINECT2 INSTALLATION](#kinect2-installation)
 
 	4.REPLACING FILES FOR ROS2BOT MODEL
 
@@ -142,7 +142,7 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 - rosrun kobuki_ftdi create_dev_rules 
 - add "export TURTLEBOT_3D_SENSOR = kinect2" in bashrc
 
-#3.kinect2 installation setup
+##3.kinect2 installation
 
 installing cuda based libfreenect2 in home folder
 
