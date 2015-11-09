@@ -17,12 +17,12 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 	2 GB ram
 	16 GB inbuilt memory
 
-OS installation
+####OS installation
 	Jetson TK1 board comes with Tegra-Linux-R19.3. I have encountered several problems using this version especially desktop management and login loop problem. Hence chosen Tegra-Linux-R21.3 version.
 Follow these steps in host computer
 
 
-Before you Begin
+####Before you Begin
 > You have a Jetson TK1 Tegra Developer Kit equipped with the NVIDIA Tegra K1 processor.
 > You have a host machine that is running Linux.
 > Your developer system is cabled as follows:
@@ -53,7 +53,7 @@ Before you Begin
 	2. reboot the jetson board 
 -Now you will see ubuntu environment in the jetson system.
 
-Kernal installation steps(Follow these steps in jetson board)
+####Kernal installation steps(Follow these steps in jetson board)
 1. Download following files
   1. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/zImage
   2. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-modules.tar.bz2
@@ -166,7 +166,7 @@ $ cmake ..
 $ make
 $ sudo make install
 
-Install kinect2 bridge
+####Install kinect2 bridge
 
 $ cd ~/catkin_ws/src/
 $ git clone https://github.com/code-iai/iai_kinect2.git
@@ -199,7 +199,7 @@ remove the kinec2 cable, restart the system
 After reboot  check for kinect2 inputs by typing lsusb
 copy all the kinect2files which are available in email
 
-###rviz segmentation problem
+####rviz segmentation problem
 
 install install ros-indigo-robot-model from package manager (which installs geometry dependensies too)
 then follow these steps
