@@ -90,7 +90,7 @@ Execute the following commands in the terminal:
   $ sudo apt-get install cuda-toolkit-6-5
 
 
-##ROS INSTALLATION
+## ROS INSTALLATION
 
 Turn on all the servers in software and updates under ubuntu software tab. Check all under updates tab in software and updates
 1. Follow
