@@ -17,12 +17,12 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 	2 GB ram
 	16 GB inbuilt memory
 
-####OS installation
+#####OS installation
 	Jetson TK1 board comes with Tegra-Linux-R19.3. I have encountered several problems using this version especially desktop management and login loop problem. Hence chosen Tegra-Linux-R21.3 version.
 Follow these steps in host computer
 
 
-####Before you Begin
+#####Before you Begin
 - You have a Jetson TK1 Tegra Developer Kit equipped with the NVIDIA Tegra K1 processor.
 
 - You have a host machine that is running Linux.
@@ -40,15 +40,15 @@ Follow these steps in host computer
 		-> An Ethernet cable plugged into the J1D1 on board Ethernet port.
 
 
-####1. flash the os from this link and use downloaded files- follow the instructions
+#####1. flash the os from this link and use downloaded files- follow the instructions
 
-  $ cd 
+	$ cd 
   
-  $ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra124_Linux_R21.3.0_armhf.tbz2
+  	$ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra124_Linux_R21.3.0_armhf.tbz2
 
-  $ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
+	$ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
 
-2 . after downloading these files follow these instruciton in the host computer. In the terminal,
+#####2 . after downloading these files follow these instruciton in the host computer. In the terminal,
 	$ tar -xvf Tegra124_Linux_R21.3.0_armhf.tbz2
 	$ cd Linux_for_Tegra/rootfs
 	$ sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
@@ -63,8 +63,8 @@ Follow these steps in host computer
 
 -Now you will see ubuntu environment in the jetson system.
 
-####Kernal installation steps(Follow these steps in jetson board)
-1. Download following files
+#####Kernal installation steps(Follow these steps in jetson board)
+1.Download following files
   1. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/zImage
   2. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-modules.tar.bz2
   3. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-firmware.tar.bz2
