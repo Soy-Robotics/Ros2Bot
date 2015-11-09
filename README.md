@@ -8,7 +8,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 
 - [KINECT2 INSTALLATION](#kinect2-installation)
 
-- REPLACING FILES FOR ROS2BOT MODEL
+- [REPLACING FILES FOR ROS2BOT MODEL](#replace-these-following-files)
 
 ##SBC SETUP
 
@@ -187,7 +187,7 @@ You must have read and write permissions on the USB devices of Kinect 2.
 lsusb to find out the bus id and device id of Kinect 2 (there should be 3 devices). 
 ls -l /dev/bus/usb/$BUS_ID/$DEVICE_ID and you should have rw permissions. If not, sudo chmod 666 it. To make it permanent, you can create a udev rule /etc/udev/rules.d/90-kinect2.rules:
 
-# ATTR{product}=="Kinect2"
+#### ATTR{product}=="Kinect2"
 SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02c4", MODE="0666"
 SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d8", MODE="0666"
 SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d9", MODE="0666"
@@ -210,6 +210,6 @@ $ cd ~/catkin_ws
 $ catkin_make
 $ source devel/setup.bash
 
-replace these following files
+##replace these following files
 
 in hostmachine , kinect2 glfw problem sovled after changing depth_method from opengl to cpu
