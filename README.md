@@ -71,11 +71,11 @@ Follow these steps in host computer
   
 #####2. check for the avialability of files, to do so follow these instructions in the terminal
 	$ md5sum zImage 
-	a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
+	  >a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
 	$ md5sum jetson-tk1-grinch-21.3.4-modules.tar.bz2 
-	3f84d425a13930af681cc463ad4cf3e6  jetson-tk1-grinch-21.3.4-modules.tar.bz2
+	  >3f84d425a13930af681cc463ad4cf3e6  jetson-tk1-grinch-21.3.4-modules.tar.bz2
 	$ md5sum jetson-tk1-grinch-21.3.4-firmware.tar.bz2
-	f80d37ca6ae31d03e86707ce0943eb7f  jetson-tk1-grinch-21.3.4-firmware.tar.bz2
+	  >f80d37ca6ae31d03e86707ce0943eb7f  jetson-tk1-grinch-21.3.4-firmware.tar.bz2
 
 
 #####3. now update the kernal
@@ -87,16 +87,15 @@ Follow these steps in host computer
 
 
 Now jetson board has been configured with ubuntu environment
-To install CUDA on Jetson TK1 - L4T System
 
-
+#####To install CUDA on Jetson TK1 - L4T System
 Download cuda kit from the [here](http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/cuda-repo-l4t-r21.3-6-5-prod_6.5-42_armhf.deb)
 
 Execute the following commands in the terminal:
-  $ cd /path to cuda package
-  $ sudo dpkg -i cuda-repo-<distro>_<version>_<architecture>.deb
-  $ sudo apt-get update
-  $ sudo apt-get install cuda-toolkit-6-5
+	$ cd /path to cuda package
+	$ sudo dpkg -i cuda-repo-<distro>_<version>_<architecture>.deb
+	$ sudo apt-get update
+	$ sudo apt-get install cuda-toolkit-6-5
 
 
 ## ROS INSTALLATION
