@@ -184,7 +184,8 @@ USB 3.0 must be enabled for full performance. Edit /boot/extlinux/extlinux.conf 
 sudo permissions from autosuspend
 
 You must have read and write permissions on the USB devices of Kinect 2. 
-lsusb to find out the bus id and device id of Kinect 2 (there should be 3 devices). ls -l /dev/bus/usb/$BUS_ID/$DEVICE_ID and you should have rw permissions. If not, sudo chmod 666 it. To make it permanent, you can create a udev rule /etc/udev/rules.d/90-kinect2.rules:
+lsusb to find out the bus id and device id of Kinect 2 (there should be 3 devices). 
+ls -l /dev/bus/usb/$BUS_ID/$DEVICE_ID and you should have rw permissions. If not, sudo chmod 666 it. To make it permanent, you can create a udev rule /etc/udev/rules.d/90-kinect2.rules:
 
 # ATTR{product}=="Kinect2"
 SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02c4", MODE="0666"
@@ -196,17 +197,17 @@ check in all the libusb path by typing ldd in their path
 
 remove the kinec2 cable, restart the system
 After reboot  check for kinect2 inputs by typing lsusb
-in downloads/libfreenect2/rules/90-kinect rules, edit according to your kinect2 usb configuration and copy the file to /etc/udev/rules
 copy all the kinect2files which are available in email
 
-rviz robot model
+###rviz segmentation problem
+
+install install ros-indigo-robot-model from package manager (which installs geometry dependensies too)
+then follow these steps
 $ sudo apt-get remove ros-indigo-robot-model
 $ cd ~/catkin_ws/src
 $ git clone https://github.com/ros/robot_model.git
 $ cd ~/catkin_ws
 $ catkin_make
 $ source devel/setup.bash
-install ros-indigo-robot-model
-
 
 in hostmachine , kinect2 glfw problem sovled after changing depth_method from opengl to cpu
