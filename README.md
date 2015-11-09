@@ -142,7 +142,7 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 - rosrun kobuki_ftdi create_dev_rules 
 - add "export TURTLEBOT_3D_SENSOR = kinect2" in bashrc
 
-##3.kinect2 installation
+##kinect2 installation
 
 installing cuda based libfreenect2 in home folder
 
