@@ -80,8 +80,7 @@ Now jetson board has been configured with ubuntu environment
 To install CUDA on Jetson TK1 - L4T System
 
 
-Download cuda kit from the following link
-http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/cuda-repo-l4t-r21.3-6-5-prod_6.5-42_armhf.deb
+Download cuda kit from the [here](http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/cuda-repo-l4t-r21.3-6-5-prod_6.5-42_armhf.deb)
 
 Execute the following commands in the terminal:
   $ cd /path to cuda package
