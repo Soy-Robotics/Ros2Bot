@@ -23,7 +23,7 @@ Follow these steps in host computer
 
 
 ####Before you Begin
- -You have a Jetson TK1 Tegra Developer Kit equipped with the NVIDIA Tegra K1 processor.
+- You have a Jetson TK1 Tegra Developer Kit equipped with the NVIDIA Tegra K1 processor.
 
 - You have a host machine that is running Linux.
 
@@ -48,16 +48,19 @@ Follow these steps in host computer
 
   $ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
 
-####2 . after downloading these files follow these instruciton in the host computer. In the terminal,
+2 . after downloading these files follow these instruciton in the host computer. In the terminal,
 	$ tar -xvf Tegra124_Linux_R21.3.0_armhf.tbz2
 	$ cd Linux_for_Tegra/rootfs
 	$ sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
 	$ cd ..
 	$.sudo ./apply_binaries.sh
 
-3. Now flash the os into the board by connecting the board to host computer in recovery mode.(connect the usb cable and now press the reset button by holding recovery button on jetson board)
+#####3. Now flash the os into the board by connecting the board to host computer in recovery mode.(connect the usb cable and now press the reset button by holding recovery button on jetson board)
+
 	1. sudo ./flash.sh jetson-tk1 mmcblk0p1
+
 	2. reboot the jetson board 
+
 -Now you will see ubuntu environment in the jetson system.
 
 ####Kernal installation steps(Follow these steps in jetson board)
