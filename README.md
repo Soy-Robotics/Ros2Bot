@@ -2,8 +2,19 @@
 
 Ros2Bot is a personnel Robot Kit based on open source platform for Developing Highly capable application like mobile robots through its vision system and mobile base which is empowered by single board compuer.
 
+1.SBC SETUP
+2.ROS INSTALLATION
+3.KINECT2 INSTALLATION
+4.REPLACING FILES FOR ROS2BOT MODEL
 
-OS Installation 
+SBC SETUP
+Jetson TK1 is used as single board computer. The board configurations are following
+	2.3 GHz , quad core processor
+	2 GB ram
+	16 GB inbuilt memory
+
+OS installation
+	Jetson TK1 board comes with li
 
 1. flash the os from this link and use downloaded files- follow the instructions
 
