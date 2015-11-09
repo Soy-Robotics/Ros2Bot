@@ -79,8 +79,10 @@ Now jetson board has been configured with ubuntu environment
 To install CUDA on Jetson TK1 - L4T System
 
 
+Download cuda kit from the following link
 
-Execute the following commands:
+Execute the following commands in the terminal:
+  $ cd /path to cuda package
   $ sudo dpkg -i cuda-repo-<distro>_<version>_<architecture>.deb
   $ sudo apt-get update
   $ sudo apt-get install cuda-toolkit-6-5
@@ -117,16 +119,26 @@ To avoid rviz segfault
 in ~/.bashrc:
 	unset GTK_IM_MODULE
 
-Turtlebot installation
+Let's create a catkin workspace:
 
+$ mkdir -p ~/catkin_ws/src
+$ cd ~/catkin_ws/src
+$ catkin_init_workspace
+
+Even though the workspace is empty (there are no packages in the 'src' folder, just a single CMakeLists.txt link) you can still "build" the workspace:
+
+$ cd ~/catkin_ws/
+$ catkin_make
+
+change workspace to catkin_Ws/devel/setup.bash in ~/.bashrc
+
+Turtlebot installation
 $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo-turtlebot-interactions ros-indigo-turtlebot-simulator ros-indigo-kobuki-ftdi ros-indigo-rocon-remocon ros-indigo-rocon -qt-library ros-indigo-ar-track-alvar-msgs
 - change from create to kobuki in minimal.launch
 - add export in .bashrc "export TURTLEBOT_BASE = kobuki"
 - rosrun kobuki_ftdi create_dev_rules 
 - add "export TURTLEBOT_3D_SENSOR = kinect2" in bashrc
 
-creating catkin workspace
-change workspace to catkin_Ws/devel/setup.bash in ~/.bashrc
 
 installing xlz/libfreenect2 in home folder
 
