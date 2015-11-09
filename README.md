@@ -210,4 +210,6 @@ $ cd ~/catkin_ws
 $ catkin_make
 $ source devel/setup.bash
 
+replace these following files
+
 in hostmachine , kinect2 glfw problem sovled after changing depth_method from opengl to cpu
