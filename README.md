@@ -142,11 +142,12 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 
 
 installing xlz/libfreenect2 in home folder
-
 install libfreenect2 from openk inect/libfreenect2 in downloads folder
 changed usb_port_owner_inf=2 from 0
 sudo permissions from autosuspend
 install kinect2birdge
+https://github.com/code-iai/iai_kinect2
+
 
 check in all the libusb path by typing ldd in their path 
 
