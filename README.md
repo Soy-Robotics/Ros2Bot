@@ -57,31 +57,32 @@ Follow these steps in host computer
 
 #####3. Now flash the os into the board by connecting the board to host computer in recovery mode.(connect the usb cable and now press the reset button by holding recovery button on jetson board)
 
-	1. sudo ./flash.sh jetson-tk1 mmcblk0p1
+	$ sudo ./flash.sh jetson-tk1 mmcblk0p1
 
-	2. reboot the jetson board 
+	$ reboot the jetson board 
 
 -Now you will see ubuntu environment in the jetson system.
 
 #####Kernal installation steps(Follow these steps in jetson board)
-1.Download following files
-  1. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/zImage
-  2. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-modules.tar.bz2
-  3. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-firmware.tar.bz2
+#####1.Download following files
+	$ wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/zImage
+ 	$ wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-modules.tar.bz2
+	$ wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-firmware.tar.bz2
   
-2. check for the avialability of files, to do so follow these instructions in the terminal
+#####2. check for the avialability of files, to do so follow these instructions in the terminal
 	$ md5sum zImage 
-  	a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
+	a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
 	$ md5sum jetson-tk1-grinch-21.3.4-modules.tar.bz2 
- 	  3f84d425a13930af681cc463ad4cf3e6  jetson-tk1-grinch-21.3.4-modules.tar.bz2
+	3f84d425a13930af681cc463ad4cf3e6  jetson-tk1-grinch-21.3.4-modules.tar.bz2
 	$ md5sum jetson-tk1-grinch-21.3.4-firmware.tar.bz2
- 	  f80d37ca6ae31d03e86707ce0943eb7f  jetson-tk1-grinch-21.3.4-firmware.tar.bz2
+	f80d37ca6ae31d03e86707ce0943eb7f  jetson-tk1-grinch-21.3.4-firmware.tar.bz2
 
 
-3. now update the kernal
+#####3. now update the kernal
 	$ sudo tar -C /lib/modules -vxjf jetson-tk1-grinch-21.3.4-modules.tar.bz2
 	$ sudo tar -C /lib -vxjf jetson-tk1-grinch-21.3.4-firmware.tar.bz2
 	$ sudo cp zImage /boot/zImage
+     
       check the kernal by connecting turtlebot usb and see whether u can find USB0. If so you are successfully finished the installation.
 
 
