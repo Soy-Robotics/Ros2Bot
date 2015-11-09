@@ -41,26 +41,25 @@ Before you Begin
 
    wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
 
-2 . after downloading these files follow these instruciton in the host computer
-	1 tar -xvf Tegra124_Linux_R21.3.0_armhf.tbz2
-	2 cd Linux_for_Tegra/rootfs
-	3 sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
-	4 cd ..
-	5.sudo ./apply_binaries.sh
+2 . after downloading these files follow these instruciton in the host computer. In the terminal,
+	$ tar -xvf Tegra124_Linux_R21.3.0_armhf.tbz2
+	$ cd Linux_for_Tegra/rootfs
+	$ sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
+	$ cd ..
+	$.sudo ./apply_binaries.sh
 
-3. Now flash the os into the board by connecting the board in recovery mode
+3. Now flash the os into the board by connecting the board to host computer in recovery mode.(connect the usb cable and now press the press the reset button by holding recovery button on jetson board)
 	1. sudo ./flash.sh jetson-tk1 mmcblk0p1
 	2. reboot the jetson board 
+-Now you will see ubuntu environment in the jetson system.
 
-Kernal installation steps
+Kernal installation steps(Follow these steps in jetson board)
 1. Download following files
   1. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/zImage
   2. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-modules.tar.bz2
   3. wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-firmware.tar.bz2
- 
   
-
-2. check for the avialability of files, to do so follow these instructions
+2. check for the avialability of files, to do so follow these instructions in the terminal
 	$ md5sum zImage 
   	a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
 	$ md5sum jetson-tk1-grinch-21.3.4-modules.tar.bz2 
@@ -88,43 +87,43 @@ Execute the following commands:
 
 
 #Ros Installation
-turn all the servers on in software and updates under ubuntu software tab
-check all under updates tab in software and updates
+Turn on all the servers in software and updates under ubuntu software tab. Check all under updates tab in software and updates
 1. Follow
 	http://wiki.ros.org/NvidiaJetsonTK1
-Set your Locale
-sudo update-locale LANG=C LANGUAGE=C LC_ALL=C LC_MESSAGES=POSIX
-Setup your sources.list
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
-Set up your keys
-wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
-Installation
-sudo apt-get update
-sudo apt-get install ros-indigo-ros-base
-Initialize rosdep
-sudo apt-get install python-rosdep
-sudo rosdep init
-rosdep update
-Environment setup
-echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-Getting rosinstall
-sudo apt-get install python-rosinstall
+-Set your Locale
+	$ sudo update-locale LANG=C LANGUAGE=C LC_ALL=C LC_MESSAGES=POSIX
+-Setup your sources.list
+	$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
+-Set up your keys
+	$wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
 
-to avoid rviz segfault 
+Installation
+	$ sudo apt-get update
+	$ sudo apt-get install ros-indigo-ros-base
+
+Initialize rosdep
+	$ sudo apt-get install python-rosdep
+	$ sudo rosdep init
+	$ rosdep update
+
+Environment setup
+	$ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+	$ source ~/.bashrc
+
+Getting rosinstall
+	$ sudo apt-get install python-rosinstall
+
+To avoid rviz segfault 
 in ~/.bashrc:
-unset GTK_IM_MODULE
+	unset GTK_IM_MODULE
 
 Turtlebot installation
-1.download from synaptic package manager
-2. install remaining from here packag http://wiki.ros.org/turtlebot/Tutorials/indigo/Turtlebot%20Installation
-or 
-sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo-turtlebot-interactions ros-indigo-turtlebot-simulator ros-indigo-kobuki-ftdi ros-indigo-rocon-remocon ros-indigo-rocon -qt-library ros-indigo-ar-track-alvar-msgs
-3. change from create to kobuki in minimal.launch
-4. add export in .bashrc "export TURTLEBOT_BASE = kobuki"
-5. rosrun kobuki_ftdi create_dev_rules 
-kinect installation:
-1. add "export TURTLEBOT_3D_SENSOR = kinect" in bashrc
+
+$ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo-turtlebot-interactions ros-indigo-turtlebot-simulator ros-indigo-kobuki-ftdi ros-indigo-rocon-remocon ros-indigo-rocon -qt-library ros-indigo-ar-track-alvar-msgs
+- change from create to kobuki in minimal.launch
+- add export in .bashrc "export TURTLEBOT_BASE = kobuki"
+- rosrun kobuki_ftdi create_dev_rules 
+- add "export TURTLEBOT_3D_SENSOR = kinect2" in bashrc
 
 creating catkin workspace
 change workspace to catkin_Ws/devel/setup.bash in ~/.bashrc
