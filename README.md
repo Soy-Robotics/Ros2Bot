@@ -12,7 +12,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 
 1.SBC SETUP
 
-Jetson TK1 is used as single board computer. The board configurations are following
+	Jetson TK1 is used as single board computer. The board configurations are following
 	2.3 GHz , quad core processor
 	2 GB ram
 	16 GB inbuilt memory
