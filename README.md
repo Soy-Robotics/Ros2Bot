@@ -23,11 +23,11 @@ Follow these steps in host computer
 
 
 ####Before you Begin
- You have a Jetson TK1 Tegra Developer Kit equipped with the NVIDIA Tegra K1 processor.
+ -You have a Jetson TK1 Tegra Developer Kit equipped with the NVIDIA Tegra K1 processor.
 
- You have a host machine that is running Linux.
+- You have a host machine that is running Linux.
 
- Your developer system is cabled as follows:
+- Your developer system is cabled as follows:
 
 		->Serial cable plugged into the serial port J1A2 UART4 on the target connected to your Linux host directly or through a serial-to-USB converter. (To setup serial console on the Linux host.)
 
@@ -40,15 +40,15 @@ Follow these steps in host computer
 		-> An Ethernet cable plugged into the J1D1 on board Ethernet port.
 
 
-1. flash the os from this link and use downloaded files- follow the instructions
+####1. flash the os from this link and use downloaded files- follow the instructions
 
-   https://devtalk.nvidia.com/default/topic/823132/-customkernel-the-grinch-21-3-4-for-jetson-tk1-developed/
+  $ cd 
+  
+  $ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra124_Linux_R21.3.0_armhf.tbz2
 
-   wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra124_Linux_R21.3.0_armhf.tbz2
+  $ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
 
-   wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
-
-2 . after downloading these files follow these instruciton in the host computer. In the terminal,
+####2 . after downloading these files follow these instruciton in the host computer. In the terminal,
 	$ tar -xvf Tegra124_Linux_R21.3.0_armhf.tbz2
 	$ cd Linux_for_Tegra/rootfs
 	$ sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
