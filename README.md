@@ -181,10 +181,15 @@ USB 3.0 must be enabled for full performance. Edit /boot/extlinux/extlinux.conf 
 	# sudo gedit /boot/extlinux/extlinux.conf
 	Now change "usb_port_owner_info=0" to "usb_port_owner_info=2"
 
-changed usb_port_owner_inf=2 from 0
 sudo permissions from autosuspend
-install kinect2birdge
-https://github.com/code-iai/iai_kinect2
+
+You must have read and write permissions on the USB devices of Kinect 2. 
+lsusb to find out the bus id and device id of Kinect 2 (there should be 3 devices). ls -l /dev/bus/usb/$BUS_ID/$DEVICE_ID and you should have rw permissions. If not, sudo chmod 666 it. To make it permanent, you can create a udev rule /etc/udev/rules.d/90-kinect2.rules:
+
+# ATTR{product}=="Kinect2"
+SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02c4", MODE="0666"
+SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d8", MODE="0666"
+SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d9", MODE="0666"
 
 
 check in all the libusb path by typing ldd in their path 
