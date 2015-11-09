@@ -2,7 +2,7 @@
 
 Ros2Bot is a personnel Robot Kit based on open source platform for Developing Highly capable application like mobile robots through its vision system and mobile base which is empowered by single board compuer.
 
-	1.SBC SETUP
+	1.[SBC SETUP](#sbc setup)
 
 	2.ROS INSTALLATION
 
@@ -48,7 +48,7 @@ Before you Begin
 	$ cd ..
 	$.sudo ./apply_binaries.sh
 
-3. Now flash the os into the board by connecting the board to host computer in recovery mode.(connect the usb cable and now press the press the reset button by holding recovery button on jetson board)
+3. Now flash the os into the board by connecting the board to host computer in recovery mode.(connect the usb cable and now press the reset button by holding recovery button on jetson board)
 	1. sudo ./flash.sh jetson-tk1 mmcblk0p1
 	2. reboot the jetson board 
 -Now you will see ubuntu environment in the jetson system.
@@ -131,7 +131,7 @@ Even though the workspace is empty (there are no packages in the 'src' folder, j
 $ cd ~/catkin_ws/
 $ catkin_make
 
-change workspace to catkin_Ws/devel/setup.bash in ~/.bashrc
+change the environment to catkin_Ws/devel/setup.bash in ~/.bashrc
 
 Turtlebot installation
 $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo-turtlebot-interactions ros-indigo-turtlebot-simulator ros-indigo-kobuki-ftdi ros-indigo-rocon-remocon ros-indigo-rocon -qt-library ros-indigo-ar-track-alvar-msgs
@@ -140,8 +140,30 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 - rosrun kobuki_ftdi create_dev_rules 
 - add "export TURTLEBOT_3D_SENSOR = kinect2" in bashrc
 
+#3.kinect2 installation setup
 
-installing xlz/libfreenect2 in home folder
+installing cuda based libfreenect2 in home folder
+
+https://github.com/GaiTech-Robotics/libfreenect2
+sudo apt-get install -y build-essential libturbojpeg libtool autoconf libudev-dev cmake mesa-common-dev freeglut3-dev libxrandr-dev doxygen libxi-dev libjpeg-turbo8-dev
+cd libfreenect2/depends
+sh install_ubuntu.sh
+sudo ln -s /usr/lib/arm-linux-gnueabihf/libturbojpeg.so.0.0.0 /usr/lib/arm-linux-gnueabihf/libturbojpeg.so
+cd ../examples/protonect/
+mkdir build && cd build
+cmake ..
+make 
+sudo make install
+
+Installing libfreenect2 in Download folder
+$ cd Downloads/
+$ 
+
+
+
+
+
+
 install libfreenect2 from openk inect/libfreenect2 in downloads folder
 changed usb_port_owner_inf=2 from 0
 sudo permissions from autosuspend
