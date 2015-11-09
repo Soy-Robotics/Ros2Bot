@@ -4,7 +4,6 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 
 - [SBC SETUP](#sbc-setup)
 
-
 - [ROS INSTALLATION](#ros-installation)
 
 - [KINECT2 INSTALLATION](#kinect2-installation)
@@ -143,29 +142,45 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 
 ##kinect2 installation
 
-installing cuda based libfreenect2 in home folder
+####Installing cuda based libfreenect2 in home folder
 
-https://github.com/GaiTech-Robotics/libfreenect2
-sudo apt-get install -y build-essential libturbojpeg libtool autoconf libudev-dev cmake mesa-common-dev freeglut3-dev libxrandr-dev doxygen libxi-dev libjpeg-turbo8-dev
-cd libfreenect2/depends
-sh install_ubuntu.sh
-sudo ln -s /usr/lib/arm-linux-gnueabihf/libturbojpeg.so.0.0.0 /usr/lib/arm-linux-gnueabihf/libturbojpeg.so
-cd ../examples/protonect/
-mkdir build && cd build
-cmake ..
-make 
-sudo make install
+$ https://github.com/GaiTech-Robotics/libfreenect2
+$ sudo apt-get install -y build-essential libturbojpeg libtool autoconf libudev-dev cmake mesa-common-dev freeglut3-dev libxrandr-dev doxygen libxi-dev libjpeg-turbo8-dev
+$ cd libfreenect2/depends
+$ sh install_ubuntu.sh
+$ sudo ln -s /usr/lib/arm-linux-gnueabihf/libturbojpeg.so.0.0.0 /usr/lib/arm-linux-gnueabihf/libturbojpeg.so
+$ cd ../examples/protonect/
+$ mkdir build && cd build
+$ cmake ..
+$ make 
+$ sudo make install
 
-Installing libfreenect2 in Download folder
+####Installing libfreenect2 in Download folder
 $ cd Downloads/
-$ 
+$ git clone https://github.com/OpenKinect/libfreenect2.git
+$ sudo apt-get install build-essential cmake pkg-config libturbojpeg libjpeg-turbo8-dev mesa-common-dev freeglut3-dev libxrandr-dev libxi-dev
+$ cd libfreenect2/depends
+$ sh install_ubuntu.sh
+$ mkdir build && cd build
+$ cmake ..
+$ make
+$ sudo make install
 
+Install kinect2 bridge
 
+$ cd ~/catkin_ws/src/
+$ git clone https://github.com/code-iai/iai_kinect2.git
+$ cd iai_kinect2
+$ rosdep install -r --from-paths .
+$ cd ~/catkin_ws
+$ catkin_make -DCMAKE_BUILD_TYPE="Release"
 
+USB 3.0 must be enabled for full performance. Edit /boot/extlinux/extlinux.conf to change usb_port_owner_info=0 to usb_port_owner_info=2 to enable USB 3.0.
 
+	$ sudo -s
+	# sudo gedit /boot/extlinux/extlinux.conf
+	Now change "usb_port_owner_info=0" to "usb_port_owner_info=2"
 
-
-install libfreenect2 from openk inect/libfreenect2 in downloads folder
 changed usb_port_owner_inf=2 from 0
 sudo permissions from autosuspend
 install kinect2birdge
