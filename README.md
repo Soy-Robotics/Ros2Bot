@@ -6,11 +6,6 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 - [Dependencies](#dependencies)
 - [Install](#install)
 - [OpenCL](#opencl)
-  - [OpenCL with AMD](#opencl-with-amd)
-  - [OpenCL with Nvidia](#opencl-with-nvidia)
-  - [OpenCL with Intel](#opencl-with-intel)
-- [Citation](#citation)
-- [Screenshots](#screenshots)
 	- [SBC SETUP](#sbc setup)
 	- [Description](#description)
 
