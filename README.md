@@ -71,11 +71,11 @@ Follow these steps in host computer
   
 #####2. check for the avialability of files, to do so follow these instructions in the terminal
 	$ md5sum zImage 
-	  > a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
+	  a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
 	$ md5sum jetson-tk1-grinch-21.3.4-modules.tar.bz2 
-	  > 3f84d425a13930af681cc463ad4cf3e6  jetson-tk1-grinch-21.3.4-modules.tar.bz2
+	  3f84d425a13930af681cc463ad4cf3e6  jetson-tk1-grinch-21.3.4-modules.tar.bz2
 	$ md5sum jetson-tk1-grinch-21.3.4-firmware.tar.bz2
-	  > f80d37ca6ae31d03e86707ce0943eb7f  jetson-tk1-grinch-21.3.4-firmware.tar.bz2
+	  f80d37ca6ae31d03e86707ce0943eb7f  jetson-tk1-grinch-21.3.4-firmware.tar.bz2
 
 
 #####3. now update the kernal
@@ -101,95 +101,147 @@ Execute the following commands in the terminal:
 ## ROS INSTALLATION
 
 Turn on all the servers in software and updates under ubuntu software tab. Check all under updates tab in software and updates
+
 1. Follow
+
 	http://wiki.ros.org/NvidiaJetsonTK1
+
 -Set your Locale
+
 	$ sudo update-locale LANG=C LANGUAGE=C LC_ALL=C LC_MESSAGES=POSIX
+	
 -Setup your sources.list
+
 	$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
+	
 -Set up your keys
+
 	$wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
 
 Installation
+
 	$ sudo apt-get update
+	
 	$ sudo apt-get install ros-indigo-ros-base
 
 Initialize rosdep
+
 	$ sudo apt-get install python-rosdep
+
 	$ sudo rosdep init
+
 	$ rosdep update
 
 Environment setup
+
 	$ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+
 	$ source ~/.bashrc
 
 Getting rosinstall
+
 	$ sudo apt-get install python-rosinstall
 
 To avoid rviz segfault 
+
 in ~/.bashrc:
+
 	unset GTK_IM_MODULE
 
 Let's create a catkin workspace:
 
-$ mkdir -p ~/catkin_ws/src
-$ cd ~/catkin_ws/src
-$ catkin_init_workspace
+	$ mkdir -p ~/catkin_ws/src
+
+	$ cd ~/catkin_ws/src
+	
+	$ catkin_init_workspace
+
 
 Even though the workspace is empty (there are no packages in the 'src' folder, just a single CMakeLists.txt link) you can still "build" the workspace:
 
 $ cd ~/catkin_ws/
+
 $ catkin_make
 
 change the environment to catkin_Ws/devel/setup.bash in ~/.bashrc
 
-Turtlebot installation
+#####Turtlebot installation
+
 $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo-turtlebot-interactions ros-indigo-turtlebot-simulator ros-indigo-kobuki-ftdi ros-indigo-rocon-remocon ros-indigo-rocon -qt-library ros-indigo-ar-track-alvar-msgs
+
 - change from create to kobuki in minimal.launch
-- add export in .bashrc "export TURTLEBOT_BASE = kobuki"
+
+- add  "export TURTLEBOT_BASE = kobuki" in bashrc
+
 - rosrun kobuki_ftdi create_dev_rules 
+
 - add "export TURTLEBOT_3D_SENSOR = kinect2" in bashrc
 
 ##kinect2 installation
 
 ####Installing cuda based libfreenect2 in home folder
 
-$ https://github.com/GaiTech-Robotics/libfreenect2
-$ sudo apt-get install -y build-essential libturbojpeg libtool autoconf libudev-dev cmake mesa-common-dev freeglut3-dev libxrandr-dev doxygen libxi-dev libjpeg-turbo8-dev
-$ cd libfreenect2/depends
-$ sh install_ubuntu.sh
-$ sudo ln -s /usr/lib/arm-linux-gnueabihf/libturbojpeg.so.0.0.0 /usr/lib/arm-linux-gnueabihf/libturbojpeg.so
-$ cd ../examples/protonect/
-$ mkdir build && cd build
-$ cmake ..
-$ make 
-$ sudo make install
+	$ https://github.com/GaiTech-Robotics/libfreenect2
+
+	$ sudo apt-get install -y build-essential libturbojpeg libtool autoconf libudev-dev cmake mesa-common-dev freeglut3-dev libxrandr-dev doxygen libxi-dev libjpeg-turbo8-dev
+	
+	$ cd libfreenect2/depends
+
+	$ sh install_ubuntu.sh
+	
+	$ sudo ln -s /usr/lib/arm-linux-gnueabihf/libturbojpeg.so.0.0.0 /usr/lib/arm-linux-gnueabihf/libturbojpeg.so
+	
+	$ cd ../examples/protonect/
+	
+	$ mkdir build && cd build
+	
+	$ cmake ..
+	
+	$ make 
+	
+	$ sudo make install
 
 ####Installing libfreenect2 in Download folder
-$ cd Downloads/
-$ git clone https://github.com/OpenKinect/libfreenect2.git
-$ sudo apt-get install build-essential cmake pkg-config libturbojpeg libjpeg-turbo8-dev mesa-common-dev freeglut3-dev libxrandr-dev libxi-dev
-$ cd libfreenect2/depends
-$ sh install_ubuntu.sh
-$ mkdir build && cd build
-$ cmake ..
-$ make
-$ sudo make install
+	$ cd Downloads/
+	
+	$ git clone https://github.com/OpenKinect/libfreenect2.git
+	
+	$ sudo apt-get install build-essential cmake pkg-config libturbojpeg libjpeg-turbo8-dev mesa-common-dev freeglut3-dev libxrandr-dev libxi-dev
+	
+	$ cd libfreenect2/depends
+	
+	$ sh install_ubuntu.sh
+	
+	$ mkdir build && cd build
+	
+	$ cmake ..
+	
+	$ make
+	
+	$ sudo make install
+
 
 ####Install kinect2 bridge
 
-$ cd ~/catkin_ws/src/
-$ git clone https://github.com/code-iai/iai_kinect2.git
-$ cd iai_kinect2
-$ rosdep install -r --from-paths .
-$ cd ~/catkin_ws
-$ catkin_make -DCMAKE_BUILD_TYPE="Release"
+	$ cd ~/catkin_ws/src/
+	
+	$ git clone https://github.com/code-iai/iai_kinect2.git
+	
+	$ cd iai_kinect2
+	
+	$ rosdep install -r --from-paths .
+	
+	$ cd ~/catkin_ws
+	
+	$ catkin_make -DCMAKE_BUILD_TYPE="Release"
 
 USB 3.0 must be enabled for full performance. Edit /boot/extlinux/extlinux.conf to change usb_port_owner_info=0 to usb_port_owner_info=2 to enable USB 3.0.
 
 	$ sudo -s
+	
 	# sudo gedit /boot/extlinux/extlinux.conf
-	Now change "usb_port_owner_info=0" to "usb_port_owner_info=2"
+
+Now change "usb_port_owner_info=0" to "usb_port_owner_info=2"
 
 sudo permissions from autosuspend
 
@@ -213,13 +265,20 @@ copy all the kinect2files which are available in email
 
 install install ros-indigo-robot-model from package manager (which installs geometry dependensies too)
 then follow these steps
-$ sudo apt-get remove ros-indigo-robot-model
-$ cd ~/catkin_ws/src
-$ git clone https://github.com/ros/robot_model.git
-$ cd ~/catkin_ws
-$ catkin_make
-$ source devel/setup.bash
+	$ sudo apt-get remove ros-indigo-robot-model
+	
+	$ cd ~/catkin_ws/src
+	
+	$ git clone https://github.com/ros/robot_model.git
+	
+	$ cd ~/catkin_ws
+	
+	$ catkin_make
+	
+	$ source devel/setup.bash
+
 
 ##replace these following files
+TODO
 
 in hostmachine , kinect2 glfw problem sovled after changing depth_method from opengl to cpu
