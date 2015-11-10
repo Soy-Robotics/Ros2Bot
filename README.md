@@ -29,7 +29,7 @@ Follow these steps in host computer
 
 - Your developer system is cabled as follows:
 
-		->Serial cable plugged into the serial port J1A2 UART4 on the target connected to your Linux host directly or through a serial-to-USB converter. (To setup serial console on the Linux host.)
+		-> Serial cable plugged into the serial port J1A2 UART4 on the target connected to your Linux host directly or through a serial-to-USB converter. (To setup serial console on the Linux host.)
 
 		-> USB Micro-B cable connecting Jetson TK1 (J1E1 USB0) to your Linux host for flashing.
 
@@ -71,11 +71,11 @@ Follow these steps in host computer
   
 #####2. check for the avialability of files, to do so follow these instructions in the terminal
 	$ md5sum zImage 
-	  >a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
+	  > a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
 	$ md5sum jetson-tk1-grinch-21.3.4-modules.tar.bz2 
-	  >3f84d425a13930af681cc463ad4cf3e6  jetson-tk1-grinch-21.3.4-modules.tar.bz2
+	  > 3f84d425a13930af681cc463ad4cf3e6  jetson-tk1-grinch-21.3.4-modules.tar.bz2
 	$ md5sum jetson-tk1-grinch-21.3.4-firmware.tar.bz2
-	  >f80d37ca6ae31d03e86707ce0943eb7f  jetson-tk1-grinch-21.3.4-firmware.tar.bz2
+	  > f80d37ca6ae31d03e86707ce0943eb7f  jetson-tk1-grinch-21.3.4-firmware.tar.bz2
 
 
 #####3. now update the kernal
