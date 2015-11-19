@@ -2,7 +2,7 @@
 
 Ros2Bot is a personnel Robot Kit based on open source platform for Developing Highly capable application like mobile robots through its vision system and mobile base which is empowered by single board compuer.
 
-- [Quick Launch](#quick-launch)
+- [Quick Guide](#quick-guide)
 
 - [SBC SETUP](#sbc-setup)
 
@@ -12,9 +12,37 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 
 - [REPLACING FILES FOR ROS2BOT MODEL](#replace-these-following-files)
 
-##Quick Launch
+##Quick Guide
 
-	TODO
+	Before using ROS2BOT, you must configure host computer(which ubuntu is running). In the host computer add ROS network to your bashrc
+	in ./bashrc add these lines
+		export
+		export
+	
+	Now turn ON ROS2BOT and connect to it from your host computer 
+		ssh ubuntu@192.168.x.xxx
+	
+	For ROS2BOT teleop follow these steps
+		Open the terminal, connect to ROS2BOT from your host PC 
+		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
+		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_bringup minimal.launch
+		In another terminaL :
+		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
+		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_teleop keyboard_teleop.launch
+	
+	FOR ROS2BOT navigation, follow these steps
+		Open the terminal, connect to ROS2BOT from your host PC 
+		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
+		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_bringup minimal.launch
+		In another terminaL :
+		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
+		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_navigation gmapping_kinect2.launch
+		
+	FOR rviz,
+		Open in the host computer
+		HOST@HOST-PC$ rviz
+		
+		
 	
 	
 ##SBC SETUP
