@@ -12,7 +12,12 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 
 5. [REPLACING FILES FOR ROS2BOT MODEL](#5-replace-these-following-files)
 
-![picture](http://letsmakerobots.com/files/Screenshot_from_2015-10-23_08_44_26.png) ![image](http://letsmakerobots.com/files/field_primary_image/Screenshot_from_2015-10-23_08_44_48.png?)
+
+![ROS2BOT MODEL](http://letsmakerobots.com/files/field_primary_image/Screenshot_from_2015-10-23_08_44_48.png?)
+
+![](http://letsmakerobots.com/files/Screenshot_from_2015-10-23_08_44_26.png) 
+
+![](http://letsmakerobots.com/files/Screenshot_from_2015-11-02_07_43_39.png)
 
 
 ##1. Quick Guide
