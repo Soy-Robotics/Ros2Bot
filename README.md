@@ -40,11 +40,16 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_teleop keyboard_teleop.launch
 
 ####  1.3 FOR ROS2BOT navigation, follow these steps
-  Open the terminal, connect to ROS2BOT from your host PC 
+    Open the terminal, connect to ROS2BOT from your host PC 
+		
 		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
+		
 		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_bringup minimal.launch
-  In another terminaL :
+
+    In another terminaL :
+		
 		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
+		
 		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_navigation gmapping_kinect2.launch
 		
   FOR rviz,
