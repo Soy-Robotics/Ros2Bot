@@ -222,7 +222,7 @@ change the environment to catkin_Ws/devel/setup.bash in ~/.bashrc
 
 #####3.2 Turtlebot installation
 
-$ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo-turtlebot-interactions ros-indigo-turtlebot-simulator ros-indigo-kobuki-ftdi ros-indigo-rocon-remocon ros-indigo-rocon -qt-library ros-indigo-ar-track-alvar-msgs
+$ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo-turtlebot-interactions ros-indigo-kobuki-ftdi ros-indigo-rocon-remocon ros-indigo-rocon-qt-library ros-indigo-ar-track-alvar-msgs
 
 - Change from create to kobuki in minimal.launch at turtlebot_bringup/launch
 
