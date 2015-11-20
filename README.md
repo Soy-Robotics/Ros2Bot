@@ -14,7 +14,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 
 ##1. Quick Guide
 
-  ####1.1 ROS Network Setup
+####  1.1 ROS Network Setup
 
 	Before using ROS2BOT, you must configure ROS network.
 	In the host computer add ROS network to your bashrc, in ./bashrc add these lines
@@ -31,7 +31,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 	Now turn ON ROS2BOT and connect to it from your host computer 
 		ssh ubuntu@192.168.x.xxx
 	
-  ####1.2 For ROS2BOT teleop follow these steps
+####  1.2 For ROS2BOT teleop follow these steps
     Open the terminal, connect to ROS2BOT from your host PC 
 		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
 		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_bringup minimal.launch
@@ -39,7 +39,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
 		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_teleop keyboard_teleop.launch
 
-####1.3 FOR ROS2BOT navigation, follow these steps
+####  1.3 FOR ROS2BOT navigation, follow these steps
   Open the terminal, connect to ROS2BOT from your host PC 
 		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
 		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_bringup minimal.launch
