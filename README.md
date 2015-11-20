@@ -60,19 +60,19 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 		
 	
 	
-##SBC SETUP
+##2 SBC SETUP
 
 	Jetson TK1 is used as single board computer. The board configurations are following
 	2.3 GHz , quad core processor
 	2 GB ram
 	16 GB inbuilt memory
 
-#####OS installation
+#####2.1 OS installation
 	Jetson TK1 board comes with Tegra-Linux-R19.3. I have encountered several problems using this version especially desktop management and login loop problem. Hence chosen Tegra-Linux-R21.3 version.
 Follow these steps in host computer
 
 
-#####Before you Begin
+#####2.1.1 Before you Begin
 - You have a Jetson TK1 Tegra Developer Kit equipped with the NVIDIA Tegra K1 processor.
 
 - You have a host machine that is running Linux.
@@ -90,7 +90,7 @@ Follow these steps in host computer
 		-> An Ethernet cable plugged into the J1D1 on board Ethernet port.
 
 
-#####1. flash the os from this link and use downloaded files- follow the instructions
+#####2.1.2 Flash the os from this link and use downloaded files- follow the instructions
 
 	$ cd 
   
@@ -98,14 +98,14 @@ Follow these steps in host computer
 
 	$ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
 
-#####2 . after downloading these files follow these instruciton in the host computer. In the terminal,
+#####2.1.3 After downloading these files follow these instruciton in the host computer. In the terminal,
 	$ tar -xvf Tegra124_Linux_R21.3.0_armhf.tbz2
 	$ cd Linux_for_Tegra/rootfs
 	$ sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
 	$ cd ..
 	$.sudo ./apply_binaries.sh
 
-#####3. Now flash the os into the board by connecting the board to host computer in recovery mode.(connect the usb cable and now press the reset button by holding recovery button on jetson board)
+#####2.1.4 Now flash the os into the board by connecting the board to host computer in recovery mode.(connect the usb cable and now press the reset button by holding recovery button on jetson board)
 
 	$ sudo ./flash.sh jetson-tk1 mmcblk0p1
 
@@ -113,13 +113,13 @@ Follow these steps in host computer
 
 -Now you will see ubuntu environment in the jetson system.
 
-#####Kernal installation steps(Follow these steps in jetson board)
-#####1.Download following files
+#####2.2 Kernal installation steps(Follow these steps in jetson board)
+#####2.2.1 Download following files
 	$ wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/zImage
  	$ wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-modules.tar.bz2
 	$ wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-firmware.tar.bz2
   
-#####2. check for the avialability of files, to do so follow these instructions in the terminal
+#####2.2.2 Check for the avialability of files, to do so follow these instructions in the terminal
 	$ md5sum zImage 
 	  a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
 	$ md5sum jetson-tk1-grinch-21.3.4-modules.tar.bz2 
@@ -128,7 +128,7 @@ Follow these steps in host computer
 	  f80d37ca6ae31d03e86707ce0943eb7f  jetson-tk1-grinch-21.3.4-firmware.tar.bz2
 
 
-#####3. now update the kernal
+#####2.2.3 Now update the kernal
 	$ sudo tar -C /lib/modules -vxjf jetson-tk1-grinch-21.3.4-modules.tar.bz2
 	$ sudo tar -C /lib -vxjf jetson-tk1-grinch-21.3.4-firmware.tar.bz2
 	$ sudo cp zImage /boot/zImage
@@ -138,7 +138,9 @@ Follow these steps in host computer
 
 Now jetson board has been configured with ubuntu environment
 
-#####To install CUDA on Jetson TK1 - L4T System
+#####2.3 CUDA Installation
+
+To install CUDA on Jetson TK1 - L4T System
 Download cuda kit from the [here](http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/cuda-repo-l4t-r21.3-6-5-prod_6.5-42_armhf.deb)
 
 Execute the following commands in the terminal:
@@ -148,11 +150,10 @@ Execute the following commands in the terminal:
 	$ sudo apt-get install cuda-toolkit-6-5
 
 
-## ROS INSTALLATION
+## 3. ROS INSTALLATION
 
+####3.1 Installation Steps
 Turn on all the servers in software and updates under ubuntu software tab. Check all under updates tab in software and updates
-
-1. Follow
 
 	http://wiki.ros.org/NvidiaJetsonTK1
 
@@ -168,13 +169,13 @@ Turn on all the servers in software and updates under ubuntu software tab. Check
 
 	$wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
 
-Installation
+- Installation
 
 	$ sudo apt-get update
 	
 	$ sudo apt-get install ros-indigo-ros-base
 
-Initialize rosdep
+- Initialize rosdep
 
 	$ sudo apt-get install python-rosdep
 
@@ -182,23 +183,21 @@ Initialize rosdep
 
 	$ rosdep update
 
-Environment setup
+- Environment setup
 
 	$ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 
 	$ source ~/.bashrc
 
-Getting rosinstall
+- Getting rosinstall
 
 	$ sudo apt-get install python-rosinstall
 
-To avoid rviz segfault 
-
-in ~/.bashrc:
+- To avoid rviz segfault, in ~/.bashrc:
 
 	unset GTK_IM_MODULE
 
-Let's create a catkin workspace:
+- Let's create a catkin workspace:
 
 	$ mkdir -p ~/catkin_ws/src
 
@@ -215,21 +214,21 @@ $ catkin_make
 
 change the environment to catkin_Ws/devel/setup.bash in ~/.bashrc
 
-#####Turtlebot installation
+#####3.2 Turtlebot installation
 
 $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo-turtlebot-interactions ros-indigo-turtlebot-simulator ros-indigo-kobuki-ftdi ros-indigo-rocon-remocon ros-indigo-rocon -qt-library ros-indigo-ar-track-alvar-msgs
 
-- change from create to kobuki in minimal.launch
+- Change from create to kobuki in minimal.launch at turtlebot_bringup/launch
 
 - add  "export TURTLEBOT_BASE = kobuki" in bashrc
 
-- rosrun kobuki_ftdi create_dev_rules 
+- $ rosrun kobuki_ftdi create_dev_rules 
 
 - add "export TURTLEBOT_3D_SENSOR = kinect2" in bashrc
 
-##kinect2 installation
+##4. kinect2 installation
 
-####Installing cuda based libfreenect2 in home folder
+####4.1 Installing cuda based libfreenect2 in home folder
 
 	$ https://github.com/GaiTech-Robotics/libfreenect2
 
@@ -251,7 +250,7 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 	
 	$ sudo make install
 
-####Installing libfreenect2 in Download folder
+####4.2 Installing libfreenect2 in Download folder
 	$ cd Downloads/
 	
 	$ git clone https://github.com/OpenKinect/libfreenect2.git
@@ -271,7 +270,7 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 	$ sudo make install
 
 
-####Install kinect2 bridge
+####4.3 Install kinect2 bridge
 
 	$ cd ~/catkin_ws/src/
 	
@@ -285,31 +284,26 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 	
 	$ catkin_make -DCMAKE_BUILD_TYPE="Release"
 
-USB 3.0 must be enabled for full performance. Edit /boot/extlinux/extlinux.conf to change usb_port_owner_info=0 to usb_port_owner_info=2 to enable USB 3.0.
+- USB 3.0 must be enabled for full performance. Edit /boot/extlinux/extlinux.conf to change usb_port_owner_info=0 to usb_port_owner_info=2 to enable USB 3.0.
 
 	$ sudo -s
 	
 	# sudo gedit /boot/extlinux/extlinux.conf
 
-Now change "usb_port_owner_info=0" to "usb_port_owner_info=2"
+- Now change "usb_port_owner_info=0" to "usb_port_owner_info=2"
 
-sudo permissions from autosuspend
+-You must have read and write permissions on the USB devices of Kinect 2.
 
-You must have read and write permissions on the USB devices of Kinect 2. 
-lsusb to find out the bus id and device id of Kinect 2 (there should be 3 devices). 
-ls -l /dev/bus/usb/$BUS_ID/$DEVICE_ID and you should have rw permissions. If not, sudo chmod 666 it. To make it permanent, you can create a udev rule /etc/udev/rules.d/90-kinect2.rules:
+- lsusb to find out the bus id and device id of Kinect 2 (there should be 3 devices).
+- ls -l /dev/bus/usb/$BUS_ID/$DEVICE_ID and you should have rw permissions. To make it permanent, you can create a udev rule /etc/udev/rules.d/90-kinect2.rules. Add these lines in it.
 
-#### ATTR{product}=="Kinect2"
-SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02c4", MODE="0666"
-SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d8", MODE="0666"
-SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d9", MODE="0666"
+ATTR{product}=="Kinect2"
+	SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02c4", MODE="0666" 
+	SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d8", MODE="0666"
+	SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d9", MODE="0666"
 
+-Now remove the kinec2 cable, restart the system After reboot check for kinect2 inputs by typing lsusb
 
-check in all the libusb path by typing ldd in their path 
-
-remove the kinec2 cable, restart the system
-After reboot  check for kinect2 inputs by typing lsusb
-copy all the kinect2files which are available in email
 
 ####rviz segmentation problem
 
