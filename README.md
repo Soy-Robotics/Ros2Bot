@@ -105,7 +105,9 @@ Follow these steps in host computer
 	$ cd ..
 	$.sudo ./apply_binaries.sh
 
-#####2.1.4 Now flash the os into the board by connecting the board to host computer in recovery mode.(connect the usb cable and now press the reset button by holding recovery button on jetson board)
+#####2.1.4 Flash OS
+  
+  Now flash the os into the board by connecting the board to host computer in recovery mode.(connect the usb cable and now press the reset button by holding recovery button on jetson board)
 
 	$ sudo ./flash.sh jetson-tk1 mmcblk0p1
 
@@ -288,7 +290,7 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 
 	$ sudo -s
 	
-	# sudo gedit /boot/extlinux/extlinux.conf
+	  sudo gedit /boot/extlinux/extlinux.conf
 
 - Now change "usb_port_owner_info=0" to "usb_port_owner_info=2"
 
