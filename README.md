@@ -2,17 +2,19 @@
 
 Ros2Bot is a personnel Robot Kit based on open source platform for Developing Highly capable application like mobile robots through its vision system and mobile base which is empowered by single board compuer.
 
-- [Quick Guide](#quick-guide)
+- 1. [Quick Guide](#quick-guide)
 
-- [SBC SETUP](#sbc-setup)
+- 2. [SBC SETUP](#sbc-setup)
 
-- [ROS INSTALLATION](#ros-installation)
+- 3. [ROS INSTALLATION](#ros-installation)
 
-- [KINECT2 INSTALLATION](#kinect2-installation)
+- 4. [KINECT2 INSTALLATION](#kinect2-installation)
 
-- [REPLACING FILES FOR ROS2BOT MODEL](#replace-these-following-files)
+- 5. [REPLACING FILES FOR ROS2BOT MODEL](#replace-these-following-files)
 
-##Quick Guide
+##1. Quick Guide
+
+  ####1.1 ROS Network Setup
 
 	Before using ROS2BOT, you must configure ROS network.
 	In the host computer add ROS network to your bashrc, in ./bashrc add these lines
@@ -29,23 +31,23 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 	Now turn ON ROS2BOT and connect to it from your host computer 
 		ssh ubuntu@192.168.x.xxx
 	
-	For ROS2BOT teleop follow these steps
-		Open the terminal, connect to ROS2BOT from your host PC 
+  ####1.2 For ROS2BOT teleop follow these steps
+    Open the terminal, connect to ROS2BOT from your host PC 
 		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
 		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_bringup minimal.launch
 		In another terminaL :
 		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
 		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_teleop keyboard_teleop.launch
-	
-	FOR ROS2BOT navigation, follow these steps
-		Open the terminal, connect to ROS2BOT from your host PC 
+
+####1.3 FOR ROS2BOT navigation, follow these steps
+  Open the terminal, connect to ROS2BOT from your host PC 
 		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
 		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_bringup minimal.launch
-		In another terminaL :
+  In another terminaL :
 		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
 		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_navigation gmapping_kinect2.launch
 		
-	FOR rviz,
+  FOR rviz,
 		Open in the host computer
 		HOST@HOST-PC$ rviz
 		
