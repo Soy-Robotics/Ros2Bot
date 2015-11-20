@@ -312,7 +312,7 @@ ATTR{product}=="Kinect2"
 
 ####rviz segmentation problem
 
-install install ros-indigo-robot-model from package manager (which installs geometry dependensies too)
+  Install ros-indigo-robot-model from package manager (which installs geometry dependensies too)
 then follow these steps
 	$ sudo apt-get remove ros-indigo-robot-model
 	
