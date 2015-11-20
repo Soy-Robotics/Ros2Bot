@@ -18,10 +18,10 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 
 	Before using ROS2BOT, you must configure ROS network.
 	In the host computer add ROS network to your bashrc, in ./bashrc add these lines
-	
+	````
 		> echo export ROS_HOSTNAME=IP_OF_HOST_PC 
 		> echo export ROS_MASTER_URI=http://IP_OF_ROS2BOT:11311
-
+````
 	In the ROS2BOT, add ROS network to its bashrc.
 		Ubuntu@ubuntu-Tegra$ sudo gedit ~/.bashrc
 	Add these lines in bashrc
