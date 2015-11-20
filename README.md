@@ -300,8 +300,11 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 - ls -l /dev/bus/usb/$BUS_ID/$DEVICE_ID and you should have rw permissions. To make it permanent, you can create a udev rule /etc/udev/rules.d/90-kinect2.rules. Add these lines in it.
 
 ATTR{product}=="Kinect2"
-	SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02c4", MODE="0666" 
+
+	SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02c4", MODE="0666"
+	
 	SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d8", MODE="0666"
+	
 	SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d9", MODE="0666"
 
 -Now remove the kinec2 cable, restart the system After reboot check for kinect2 inputs by typing lsusb
