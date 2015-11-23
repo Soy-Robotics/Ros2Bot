@@ -110,10 +110,15 @@ Follow these steps in host computer
 
 #####2.1.3 Extracting Jetson packages
   After downloading the files, to extract them follow these instrucitons (in the host computer). In the terminal,
+
 	$ tar -xvf Tegra124_Linux_R21.3.0_armhf.tbz2
+
 	$ cd Linux_for_Tegra/rootfs
+
 	$ sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
+
 	$ cd ..
+
 	$.sudo ./apply_binaries.sh
 
 #####2.1.4 Flash OS to Jetson board
