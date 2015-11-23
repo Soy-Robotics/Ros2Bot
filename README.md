@@ -98,28 +98,31 @@ Follow these steps in host computer
 		-> An Ethernet cable plugged into the J1D1 on board Ethernet port.
 
 
-#####2.1.2 Flash the os from this link and use downloaded files- follow the instructions
+#####2.1.2 Get Jetson packages
 
-	$ cd 
+  -Download Jetson packages in your host computer from the following 
+  	
+  	$ cd 
   
   	$ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra124_Linux_R21.3.0_armhf.tbz2
 
 	$ wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v3.0/Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
 
-#####2.1.3 After downloading these files follow these instruciton in the host computer. In the terminal,
+#####2.1.3 Extracting Jetson packages
+  After downloading the files, to extract them follow these instrucitons (in the host computer). In the terminal,
 	$ tar -xvf Tegra124_Linux_R21.3.0_armhf.tbz2
 	$ cd Linux_for_Tegra/rootfs
 	$ sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R21.3.0_armhf.tbz2
 	$ cd ..
 	$.sudo ./apply_binaries.sh
 
-#####2.1.4 Flash OS
+#####2.1.4 Flash OS to Jetson board
   
-  Now flash the os into the board by connecting the board to host computer in recovery mode.(connect the usb cable and now press the reset button by holding recovery button on jetson board)
+  Now flash the os into the Jetson board by connecting the board to host computer in recovery mode.(connect the usb cable and now press the reset button by holding recovery button on jetson board).
 
 	$ sudo ./flash.sh jetson-tk1 mmcblk0p1
 
-	$ reboot the jetson board 
+	 reboot the jetson board 
 
 -Now you will see ubuntu environment in the jetson system.
 
