@@ -33,7 +33,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 	In the ROS2BOT, add ROS network to its bashrc.
 		Ubuntu@ubuntu-Tegra$ sudo gedit ~/.bashrc
 	Add these lines in bashrc
-		> echo export ROS_HOSTNAME=IP_OF_HOST_PC 
+		> echo export ROS_HOSTNAME=IP_OF_ROS2BOT 
 		> echo export ROS_MASTER_URI=http://IP_OF_ROS2BOT:11311 
 		
 	Now turn ON ROS2BOT and connect to it from your host computer 
@@ -148,10 +148,12 @@ Follow these steps in host computer
 
 #####2.2.3 Now update the kernal
 	$ sudo tar -C /lib/modules -vxjf jetson-tk1-grinch-21.3.4-modules.tar.bz2
-	$ sudo tar -C /lib -vxjf jetson-tk1-grinch-21.3.4-firmware.tar.bz2
+	$ sudo apt-get install linux-firmware
 	$ sudo cp zImage /boot/zImage
+	
+	Reboot the system
      
-      check the kernal by connecting turtlebot usb and see whether u can find USB0. If so you are successfully finished the installation.
+      Now check the kernal by connecting turtlebot usb and see whether u can find USB0 (sudo chmod 0777 /dev/ttyUSB0). If so you are successfully finished the  KERNEL installation.
 
 
 Now jetson board has been configured with ubuntu environment
