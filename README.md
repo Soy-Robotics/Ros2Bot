@@ -254,7 +254,7 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 
 ####4.1 Installing cuda based libfreenect2 in home folder
 
-	$ https://github.com/GaiTech-Robotics/libfreenect2
+	$ git clone https://github.com/GaiTech-Robotics/libfreenect2
 
 	$ sudo apt-get install -y build-essential libturbojpeg libtool autoconf libudev-dev cmake mesa-common-dev freeglut3-dev libxrandr-dev doxygen libxi-dev libjpeg-turbo8-dev
 	
@@ -284,6 +284,10 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 	$ cd libfreenect2/depends
 	
 	$ sh install_ubuntu.sh
+	
+	$ sh install_libusb.sh
+	
+	$ cd ../
 	
 	$ mkdir build && cd build
 	
