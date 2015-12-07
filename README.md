@@ -246,7 +246,7 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 
 - echo  "export TURTLEBOT_BASE=kobuki" >>~/.bashrc
 
-- $ rosrun kobuki_ftdi create_dev_rules 
+- $ rosrun kobuki_ftdi create_udev_rules 
 
 - echo "export TURTLEBOT_3D_SENSOR=kinect2" >>~/.bashrc
 
