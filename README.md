@@ -219,7 +219,7 @@ Turn on all the servers in software and updates under ubuntu software tab. Check
 
 - To avoid rviz segfault, in ~/.bashrc:
 
-	unset GTK_IM_MODULE
+	echo "unset GTK_IM_MODULE" >>~/.bashrc
 
 - Let's create a catkin workspace:
 
