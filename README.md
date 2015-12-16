@@ -150,6 +150,10 @@ Follow these steps in host computer
 	
 	Reboot the system
      
+     Default user name : ubuntu
+     
+     password          : ubuntu
+     
       Now check the kernal by connecting turtlebot usb and see whether u can find USB0 (sudo chmod 0777 /dev/ttyUSB0). If so you are successfully finished the  KERNEL installation.
 
 
