@@ -241,9 +241,9 @@ Turn on all the servers in software and updates under ubuntu software tab. Check
 
 Even though the workspace is empty (there are no packages in the 'src' folder, just a single CMakeLists.txt link) you can still "build" the workspace:
 
-$ cd ~/catkin_ws/
+	$ cd ~/catkin_ws/
 
-$ catkin_make
+	$ catkin_make
 
 change the environment to catkin_Ws/devel/setup.bash in ~/.bashrc
 
@@ -263,6 +263,8 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 
 ####4.1 Installing cuda based libfreenect2 in home folder
 
+	$ cd ~
+	
 	$ git clone https://github.com/GaiTech-Robotics/libfreenect2
 
 	$ sudo apt-get install -y build-essential libturbojpeg libtool autoconf libudev-dev cmake mesa-common-dev freeglut3-dev libxrandr-dev doxygen libxi-dev libjpeg-turbo8-dev
@@ -325,7 +327,7 @@ $ sudo apt-get install ros-indigo-turtlebot ros-indigo-turtlebot-apps ros-indigo
 
 	$ sudo -s
 	
-	  sudo gedit /boot/extlinux/extlinux.conf
+	$ sudo gedit /boot/extlinux/extlinux.conf
 
 - Now change "usb_port_owner_info=0" to "usb_port_owner_info=2"
 
