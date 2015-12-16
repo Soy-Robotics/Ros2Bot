@@ -133,10 +133,16 @@ Follow these steps in host computer
 
 #####2.2 Kernal installation steps(Follow these steps in jetson board)
 #####2.2.1 Download following files
+
+Open the terminal and type following
+
+	$ cd ~
 	$ wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/zImage
  	$ wget http://www.jarzebski.pl/files/jetsontk1/grinch-21.3.4/jetson-tk1-grinch-21.3.4-modules.tar.bz2
 
 #####2.2.2 Check for the avialability of files, to do so follow these instructions in the terminal
+	
+	$ cd ~
 	$ md5sum zImage 
 	  a4a4ea10f2fe74fbb6b10eb2a3ad5409  zImage
 	$ md5sum jetson-tk1-grinch-21.3.4-modules.tar.bz2 
@@ -144,6 +150,8 @@ Follow these steps in host computer
 
 
 #####2.2.3 Now update the kernal
+	
+	$ cd ~
 	$ sudo tar -C /lib/modules -vxjf jetson-tk1-grinch-21.3.4-modules.tar.bz2
 	$ sudo apt-get install linux-firmware
 	$ sudo cp zImage /boot/zImage
