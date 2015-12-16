@@ -127,9 +127,9 @@ Follow these steps in host computer
 
 	$ sudo ./flash.sh jetson-tk1 mmcblk0p1
 
-	 Once done jetsong board will reboot automatically
+	 Once done jetson board will reboot automatically
 
--Now connect jetson sbc to monitor using hdmi cable and usb hub to its USB 3.0 port to connect mouse & keyboard and other peripherals. you will be experiencing ubuntu environment in the jetson system.
+-Now connect jetson sbc to monitor using hdmi cable and usb hub to its USB 3.0 port to connect mouse & keyboard and other peripherals. you will be going to experience ubuntu environment in the jetson system.
 
 #####2.2 Kernal installation steps(Follow these steps in jetson board)
 #####2.2.1 Download following files
