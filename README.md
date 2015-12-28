@@ -23,49 +23,71 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 ##1. Quick Guide
 
 ####  1.1 ROS Network Setup
+	
+	Connect to ROS2BOT to its wifi network which would in the series of ROS2BOT_**** (wifi username & pswd and its default IP provided with the kit). 
+	
+	
 
-	Before using ROS2BOT, you must configure ROS network.
-	In the host computer add ROS network to your bashrc, in ./bashrc add these lines
+	Before using ROS2BOT, you must configure ROS network in host PC(which you are connecting to ROS2BOT).
+	In the host PC add ROS network to your bashrc, in ./bashrc add these lines
 	```
 		> echo export ROS_HOSTNAME=IP_OF_HOST_PC 
 		> echo export ROS_MASTER_URI=http://IP_OF_ROS2BOT:11311
 	```
-	In the ROS2BOT, add ROS network to its bashrc.
-		Ubuntu@ubuntu-Tegra$ sudo gedit ~/.bashrc
-	Add these lines in bashrc
-		> echo export ROS_HOSTNAME=IP_OF_ROS2BOT 
-		> echo export ROS_MASTER_URI=http://IP_OF_ROS2BOT:11311 
 		
-	Now turn ON ROS2BOT and connect to it from your host computer 
-		ssh ubuntu@192.168.x.xxx
+	Now turn ON ROS2BOT and connect to it from your host computer
+	Note: Currently we have a USB bug with Jetosn sbc board. So please remove USB hub before starting Jetson board. Once started connect the USB hub. While packing the usb of kobuki and kinect might have removed(You can find them next to usb hub). Connect them to the usb ports.
+		ssh ubuntu@<IP of ROS2BOT>
 	
 ####  1.2 For ROS2BOT teleop follow these steps
     Open the terminal, connect to ROS2BOT from your host PC 
     
-		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
-		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_bringup minimal.launch
+		HOST@HOST-PC$ ssh ubuntu@<IP of ROS2BOT>
+		Ubuntu@ros2bot$ roslaunch turtlebot_bringup minimal.launch
 		
     In another terminaL :
     
-		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
-		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_teleop keyboard_teleop.launch
+		HOST@HOST-PC$ ssh ubuntu@<IP of ROS2BOT>
+		Ubuntu@ros2bot$ roslaunch turtlebot_teleop keyboard_teleop.launch
 
-####  1.3 FOR ROS2BOT navigation, follow these steps
+####  1.3 FOR ROS2BOT navigation, follow these steps:
+
+	Navigation can be done using two methods: OpenGL and CPU method. When compared with CPU method, OpenGL performance is quite good.
+	####CPU METHOD
     Open the terminal, connect to ROS2BOT from your host PC 
 		
-		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
-		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_bringup minimal.launch
+		HOST@HOST-PC$ ssh ubuntu@<IP of ROS2BOT>
+		Ubuntu@ros2bot$ roslaunch turtlebot_bringup minimal.launch
 
     In another terminaL :
 		
-		HOST@HOST-PC$ ssh ubuntu@192.168.x.xxx
-		Ubuntu@ubuntu-Tegra$ roslaunch turtlebot_navigation gmapping_kinect2.launch
+		HOST@HOST-PC$ ssh ubuntu@<IP of ROS2BOT>
+		Ubuntu@ros2bot$ roslaunch turtlebot_navigation gmapping_kinect2_cpu.launch
+		
+	####OpenGL METHOD
+    Open the terminal, connect to ROS2BOT from your host PC 
+		
+		HOST@HOST-PC$ ssh ubuntu@<IP of ROS2BOT>
+		Ubuntu@ros2bot$ roslaunch turtlebot_bringup minimal.launch
+
+    In another terminaL :
+		
+		HOST@HOST-PC$ ssh ubuntu@<IP of ROS2BOT>
+		Ubuntu@ros2bot$ roslaunch turtlebot_navigation gmapping_kinect2_opengl.launch
 		
   FOR rviz,
 		Open in the host computer
 		HOST@HOST-PC$ rviz
 		
-		
+	Note: You can view ROS2BOT desktop in the host PC by the following way.
+	
+	In host Pc
+	
+	$ gvncviewer @<IP of ROS2BOT>
+	
+	You can install gvncviewer in host PC by using following command
+	
+	$ sudo apt-get install gvncviewer
 	
 	
 ##2 SBC SETUP
