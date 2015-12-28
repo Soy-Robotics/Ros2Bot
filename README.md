@@ -27,7 +27,6 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 	Connect to ROS2BOT to its wifi network which would in the series of ROS2BOT_**** (wifi username & pswd and its default IP provided with the kit). 
 	
 	
-
 	Before using ROS2BOT, you must configure ROS network in host PC(which you are connecting to ROS2BOT).
 	In the host PC add ROS network to your bashrc, in ./bashrc add these lines
 	```
@@ -36,6 +35,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 	```
 		
 	Now turn ON ROS2BOT and connect to it from your host computer
+
 	Note: Currently we have a USB bug with Jetosn sbc board. So please remove USB hub before starting Jetson board. Once started connect the USB hub. While packing the usb of kobuki and kinect might have removed(You can find them next to usb hub). Connect them to the usb ports.
 		ssh ubuntu@<IP of ROS2BOT>
 	
@@ -53,7 +53,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 ####  1.3 FOR ROS2BOT navigation, follow these steps:
 
 	Navigation can be done using two methods: OpenGL and CPU method. When compared with CPU method, OpenGL performance is quite good.
-	####CPU METHOD
+####	CPU METHOD
     Open the terminal, connect to ROS2BOT from your host PC 
 		
 		HOST@HOST-PC$ ssh ubuntu@<IP of ROS2BOT>
@@ -64,7 +64,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 		HOST@HOST-PC$ ssh ubuntu@<IP of ROS2BOT>
 		Ubuntu@ros2bot$ roslaunch turtlebot_navigation gmapping_kinect2_cpu.launch
 		
-	####OpenGL METHOD
+####	OpenGL METHOD
     Open the terminal, connect to ROS2BOT from your host PC 
 		
 		HOST@HOST-PC$ ssh ubuntu@<IP of ROS2BOT>
