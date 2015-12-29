@@ -1,4 +1,4 @@
-## SBC SETUP
+##2 SBC SETUP
 
 	Jetson TK1 is used as single board computer. The board configurations are following
 	2.3 GHz , quad core processor
