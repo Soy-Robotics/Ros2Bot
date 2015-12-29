@@ -4,7 +4,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 
 1. [Quick Guide](#1-quick-guide)
 
-2. [SBC SETUP](https://github.com/GaiTech-Robotics/Ros2Bot/blob/master/Jetson%20Board%20setup.md)
+2. [SBC SETUP](https://github.com/GaiTech-Robotics/Ros2Bot/blob/master/Jetson%20Board%20setup.md#2-sbc-setup)
 
 3. [ROS INSTALLATION](https://github.com/GaiTech-Robotics/Ros2Bot/blob/master/ROS%20and%20KINECT2%20installation.md#3-ros-installation)
 
