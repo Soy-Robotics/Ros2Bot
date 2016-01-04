@@ -109,5 +109,3 @@ then follow these steps
 	
 	$ source devel/setup.bash
 
-
-##
