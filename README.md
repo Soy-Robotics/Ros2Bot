@@ -89,7 +89,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 	
 	$ sudo apt-get install gvncviewer
 	
-	Note: You can get ROS2BOT model from [here](https://github.com/GaiTech-Robotics/Ros2Bot/blob/master/model/ros2bot_model.md#ros2bot-model-for-your-host-computer-is-provided-by-altering-changes-for-turtlebot-description)
+	Note: You can get ROS2BOT model from [here](#https://github.com/GaiTech-Robotics/Ros2Bot/blob/master/model/ros2bot_model.md#ros2bot-model-for-your-host-computer-is-provided-by-altering-changes-for-turtlebot-description)
 	
 
 
