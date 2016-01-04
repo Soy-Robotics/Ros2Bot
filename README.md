@@ -10,7 +10,7 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 
 4. [KINECT2 INSTALLATION](https://github.com/GaiTech-Robotics/Ros2Bot/blob/master/ROS%20and%20KINECT2%20installation.md#4-kinect2-installation)
 
-5. [REPLACING FILES FOR ROS2BOT MODEL](#5-replace-these-following-files)
+5. [ROS2BOT MODEL](https://github.com/GaiTech-Robotics/Ros2Bot/blob/master/model/ros2bot_model.md#ros2bot-model-for-your-host-computer-is-provided-by-altering-changes-for-turtlebot-description)
 
 
 ![ROS2BOT MODEL](http://letsmakerobots.com/files/field_primary_image/Screenshot_from_2015-10-23_08_44_48.png?)
@@ -109,7 +109,4 @@ then follow these steps
 	$ source devel/setup.bash
 
 
-##replace these following files
-TODO
-
-in hostmachine , kinect2 glfw problem sovled after changing depth_method from opengl to cpu
+##
