@@ -91,7 +91,15 @@ Ros2Bot is a personnel Robot Kit based on open source platform for Developing Hi
 	
 Note: You can get ROS2BOT model from [here](https://github.com/GaiTech-Robotics/Ros2Bot/blob/master/model/ros2bot_model.md)
 	
+You can view ROS2BOT desktop in your host pc by the following method
 
+Open the terminal in your host pc and type the following
+
+	$gvncviewer ubuntu@<IP of ros2bot>
+	
+	if gvncviewer not installed in your host pc , you can install that by using following command
+	
+	$ sudo apt-get install gvncviewer
 
 ####rviz segmentation problem
 
