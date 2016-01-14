@@ -4,9 +4,9 @@ Please follow these steps in your host  PC
 
   Open the terminal and type following
   
-  $ cd ~/
+      cd ~/
   
-  $ svn export https://github.com/GaiTech-Robotics/turtlebot/trunk/turtlebot_description
+      svn export https://github.com/GaiTech-Robotics/turtlebot/trunk/turtlebot_description
   
   Now copy the turtlebot description and murge it with available turtlebot description in your host PC as well as in Jetson board at (/opt/ros/indigo/share)
 
