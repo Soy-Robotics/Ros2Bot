@@ -11,7 +11,7 @@
   <arg name="png_level"         default="1"/>
   <arg name="depth_method"      default="opengl"/>
   <arg name="depth_device"      default="-1"/>
-  <arg name="reg_method"        default="default"/>
+  <arg name="reg_method"        default="opengl"/> <!-- Modify this value due to kinct2 offical code of iai_kinct2 -->
   <arg name="reg_devive"        default="-1"/>
   <arg name="max_depth"         default="12.0"/>
   <arg name="min_depth"         default="0.1"/>
