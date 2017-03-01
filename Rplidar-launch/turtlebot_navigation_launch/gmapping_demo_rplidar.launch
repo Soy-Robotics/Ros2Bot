@@ -9,7 +9,7 @@
   <include file="$(find turtlebot_navigation)/launch/includes/gmapping.launch.xml"/>
   <include file="$(find turtlebot_navigation)/launch/includes/move_base_laser.launch.xml"/>
  <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser4" 
-    args="0.13 0.0 0.155 3.1415926 3.1415926 0.0 /base_link /laser_frame 40" />
+    args="0.13 0.0 0.215 3.1415926 0.0 0.0 /base_link /laser_frame 40" />
   <node pkg="laser_filters" type="scan_to_scan_filter_chain"
     name="laser_filter">
     <rosparam command="load" file="$(find turtlebot_bringup)/param/laser.yaml"/>
