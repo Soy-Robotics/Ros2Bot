@@ -4,6 +4,9 @@ request:
   laser_filters: filter of rplidar for ros2bot
 
 process:
-1.Copy files under turtlebot_navigation_launch directory into launch under turtlebot_navigation
-2.Put laser.yaml into turtlbot_bringup/param
+
+ * Copy files under turtlebot_navigation_launch directory into launch under turtlebot_navigation
+ * Put laser.yaml into turtlbot_bringup/param
+ * mv 57-rplidar.rules into /etc/udev/rules.d
+  * `sudo mv 57-rplidar.rules /etc/udev/rules.d`
 
